@@ -1,18 +1,18 @@
-percent_list = ['procentov', 'protsent']
+percent_list = ['процентов', 'процент']
 for i in range(2, 21):
     if i < 5:
-        percent_list.append('protsenta')
+        percent_list.append('процента')
     else:
-        percent_list.append('protsentov')
+        percent_list.append('процентов')
 
 while True:
-    ans = input('Enter number 0-20 ("x" for exit): ')
+    ans = input('Введите число 0-20 ("x" чтобы выйти): ')
     if ans.isdigit() and int(ans) < 21:
         print(ans, percent_list[int(ans)])
         continue
     elif ans == 'x':
         break
-    print('You entered wrong value. Try again!')
+    print('Введено неверное значение. Попробуйте снова!')
 
 for i in range(21):
     print(i, percent_list[i])
