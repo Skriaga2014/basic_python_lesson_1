@@ -1,13 +1,13 @@
 duration_test = 0
 while duration_test == 0:
     durations_right = []
-    durations_list = input('Enter duration (one or list):')
+    durations_list = input('Введите число (одно или через запятую):')
     durations_list = durations_list.replace(' ', '')
     durations_list = durations_list.split(',')
     error_count = 0
     for dur in durations_list:
         if dur.isdigit() == False:
-            print('Durations may be digits only. Try again.')
+            print('Одно или более значений не являются числом. Попробуйте снова.')
             error_count += 1
             break
         durations_right.append(int(dur))
@@ -24,9 +24,9 @@ for duration in durations_right:
     minutes = (duration - days * secs_in_day - hours * secs_in_hour) // secs_in_minute
     seconds = (duration - days * secs_in_day - hours * secs_in_hour - minutes * secs_in_minute)
 
-    result_txt = f'In {duration} secs: '
+    result_txt = f'{duration} секунд: '
     result_list = [days, hours, minutes, seconds]
-    result_list_items = ['days', 'hours', 'minutes', 'seconds']
+    result_list_items = ['дн', 'час', 'мин', 'сек']
 
     for i in range(len(result_list)):
         if result_list[i] != 0:
